@@ -1,10 +1,28 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
+require('dotenv').config({
+  path: `.env`,
+})
+
+const prismicHtmlSerializer = require('./src/gatsby/htmlSerializer')
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: 'gatsby-source-prismic', 
+      options: {
+        repositoryName: 'hd01',
+        accessToken: `${process.env.PRISMIC_API_KEY}`,
+        // Get the correct URLs in blog posts
+        // linkResolver: () => (page) => `/${page.uid}`,
+        // PrismJS highlighting for labels and slices
+        htmlSerializer: () => prismicHtmlSerializer,
+        // Remove this config option if you only have one language in your Prismic repository
+        lang: 'en-us',
+        schemas: {
+          page: require('./src/schemas/page.json'),
+          //home_page: require('./src/schemas/home_page.json')
+        },
+      },
+    }
+
+  ],
 }
