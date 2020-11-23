@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from 'react-helmet'
 import Layout from "../layout"
 
 export default function Home() {
@@ -16,6 +17,11 @@ export default function Home() {
   }
 
   return (
+    <>
+    <Helmet>
+      <title>Hulse Dental - Onalaska WI</title>
+    </Helmet>
+    
     <Layout>
     <div>{msg}</div>
     <NewMessage color="black" children="Hulse Dental">
@@ -25,14 +31,15 @@ export default function Home() {
       <ul>
         <li><strike>Create Layout</strike></li>
         <li><strike>Add Layout to index</strike></li>
-        <li>Add Helmet</li>
-        <li>Add Helmet to Layout</li>
+        <li><strike>Add Helmet</strike></li>
+        <li><strike>Add Helmet to Layout</strike></li>
         <li><strike>Add Layout to Page template</strike></li>
         <li>Prismic - create home single</li>
         <li><strike>Push to hosting</strike></li>
       </ul>
     </NewMessage>
     </Layout>
+    </>
     
 
   )
