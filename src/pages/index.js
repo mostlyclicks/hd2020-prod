@@ -1,4 +1,5 @@
 import React from "react"
+import Layout from "../layout"
 
 export default function Home() {
 
@@ -6,14 +7,16 @@ export default function Home() {
 
   const NewMessage = ({color, children}) => {
     return (
+      
       <h1 style={{color: `${color}`}}>
         {children}
       </h1>
+      
     )
   }
 
   return (
-    <>
+    <Layout>
     <div>{msg}</div>
     <NewMessage color="black" children="Hulse Dental">
       <p>Index</p>
@@ -29,7 +32,8 @@ export default function Home() {
         <li>Push to hosting</li>
       </ul>
     </NewMessage>
-    </>
+    </Layout>
+    
 
   )
 }
