@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { RichText } from 'prismic-reactjs'
+import Layout from '../layout'
 
 const PageTemplate = ({data}) => {
 
@@ -11,13 +12,10 @@ const PageTemplate = ({data}) => {
   const pageBody = pageData.node.data.body[0].primary.text.html
 
   return (
-    <div>
+    <Layout>
       <h1>{pageTitle}</h1>
-      <h3>HTML</h3>
-      
-      <div dangerouslySetInnerHTML={{__html: pageBody }} />
-    
-    </div>
+      <div dangerouslySetInnerHTML={{__html: pageBody }} />    
+    </Layout>
   )
 }
 

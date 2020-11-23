@@ -23,13 +23,13 @@ export default function Home() {
 
       <h3>Todo: 11/16 - 11/23</h3>
       <ul>
-        <li>Create Layout</li>
-        <li>Add Layout to index</li>
+        <li><strike>Create Layout</strike></li>
+        <li><strike>Add Layout to index</strike></li>
         <li>Add Helmet</li>
         <li>Add Helmet to Layout</li>
-        <li>Add Layout to Page template</li>
+        <li><strike>Add Layout to Page template</strike></li>
         <li>Prismic - create home single</li>
-        <li>Push to hosting</li>
+        <li><strike>Push to hosting</strike></li>
       </ul>
     </NewMessage>
     </Layout>
