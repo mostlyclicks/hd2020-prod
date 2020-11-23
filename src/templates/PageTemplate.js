@@ -10,24 +10,18 @@ const PageTemplate = ({data}) => {
   const pageTitle = pageData.node.data.page_title.text
   const pageBody = pageData.node.data.body[0].primary.text.html
 
- 
-
   return (
     <div>
       <h1>{pageTitle}</h1>
       <h3>HTML</h3>
       
       <div dangerouslySetInnerHTML={{__html: pageBody }} />
-      
-      
-      
+    
     </div>
   )
 }
 
 export default PageTemplate
-
-
 
 
 export const query = graphql`

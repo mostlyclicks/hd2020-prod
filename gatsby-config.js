@@ -6,6 +6,7 @@ const prismicHtmlSerializer = require('./src/gatsby/htmlSerializer')
 
 module.exports = {
   plugins: [
+    `gatsby-plugin-styled-components`,
     {
       resolve: 'gatsby-source-prismic', 
       options: {
