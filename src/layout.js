@@ -1,4 +1,6 @@
 import React from 'react'
+import styled from 'styled-components'
+import breakpoint from "./css/breakpoints"
 
 import Header from './header/header'
 import Footer from './footer'
@@ -7,13 +9,43 @@ import Footer from './footer'
 const Layout = ({children}) => {
 
   return (
-    <div>
+    <StyledLayout>
       <Header />
-      <h1>This is the layout</h1>
       {children}
       <Footer />
-    </div>
+    </StyledLayout>
   )
 }
 
 export default Layout
+
+
+const StyledLayout = styled.div`
+  @media only screen and ${breakpoint.device.mobileS} {
+    border:1px solid red;
+  }
+
+  @media only screen and ${breakpoint.device.mobileM} {
+    border:1px solid blue;
+  }
+
+  @media only screen and ${breakpoint.device.mobileL} {
+    border:1px solid green;
+  }
+
+  @media only screen and ${breakpoint.device.tablet} {
+    border:1px solid black;
+  }
+
+  @media only screen and ${breakpoint.device.laptop} {
+    border:1px solid yellow;
+  }
+
+  @media only screen and ${breakpoint.device.laptopL} {
+    border:1px solid pink;
+  }
+
+  @media only screen and ${breakpoint.device.desktop} {
+    border:1px solid purple;
+  }
+`

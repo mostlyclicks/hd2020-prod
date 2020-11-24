@@ -1,8 +1,8 @@
 import React from 'react'
 
 const SliceZone = ({body}) => {
-
-  console.log(body.primary.hero_title[0].text)
+  
+  //console.log(body.primary.hero_title[0].text)
   const heroTitle = body.primary.hero_title[0].text
   const heroSubtext = body.primary.hero_content
   const sliceZoneType = body.slice_type

@@ -31,11 +31,8 @@ export const query = graphql`
 `
 
 export default function Home(props) {
-  // console.log(props.data.allPrismicHomepage.edges[0].node.data.body[0].primary.hero_title[0].text)
-  // console.log(props.data.allPrismicHomepage.edges[0].node.body.data.primary.hero_title)
-  const msg = "Hulse Dental Project"
 
-
+  const homeBody = props.data.allPrismicHomepage.edges[0].node.data.body[0]
 
   return (
     <>
@@ -44,14 +41,9 @@ export default function Home(props) {
     </Helmet>
     
     <Layout>
-    <div>{msg}</div>
-    <SliceZone body={props.data.allPrismicHomepage.edges[0].node.data.body[0]} />
-
-    <ProgressNotes />
-
+      <SliceZone body={homeBody} />
+      <ProgressNotes />
     </Layout>
     </>
-    
-
   )
 }
