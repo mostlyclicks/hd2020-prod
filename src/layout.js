@@ -1,15 +1,58 @@
 import React from 'react'
+import { StaticQuery, graphql, Link } from "gatsby"
 import styled from 'styled-components'
 import breakpoint from "./css/breakpoints"
-
 import Header from './header/header'
 import Footer from './footer'
 
 
+const navigationQuery = graphql`
+{
+  allPrismicNavigation {
+    edges {
+      node {
+        data {
+          navigation_links {
+            label
+            link {
+              uid
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
+
+
+
 const Layout = ({children}) => {
+
+
+  // const navigationData = data.allPrismicNavigation.edges[0].node.data.navigation_links
+  // console.log(navigationData)
 
   return (
     <StyledLayout>
+    
+      <StaticQuery
+        query={navigationQuery}
+        render={(data) => {
+          console.log(data)
+          return data.allPrismicNavigation.edges[0].node.data.navigation_links.map((link) => {
+            return (
+              <NavLink key={link.link.uid}>
+                <Link to={`/${link.link.uid}`}>{link.label}</Link>
+              </NavLink>
+            )
+          })
+          
+        }}
+      />
+      
+
+
       <Header />
       {children}
       <Footer />
@@ -48,4 +91,8 @@ const StyledLayout = styled.div`
   @media only screen and ${breakpoint.device.desktop} {
     border:1px solid purple;
   }
+`
+
+const NavLink = styled.div`
+
 `
