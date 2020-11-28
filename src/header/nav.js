@@ -1,13 +1,41 @@
 import React from 'react'
+import { graphql, useStaticQuery, Link } from 'gatsby'
 import styled from "styled-components"
 import breakpoint from "../css/breakpoints"
 
 
 const MainNavigation = () => {
 
+  const data = useStaticQuery(graphql`
+    query {
+        allPrismicNavigation {
+          edges {
+            node {
+              data {
+                navigation_links {
+                  label
+                  link {
+                    uid
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+  `)
+
+  const mainNav = data.allPrismicNavigation.edges[0].node.data.navigation_links
+
   return (
     <StyledMainNavigation>
-      <h3>Main Navigation goes here</h3>
+      <ul>
+      {mainNav.map((link) => {
+        return (
+          <li><Link to={`/${link.link.uid}`}>{link.label}</Link></li>
+        )
+      })}
+      </ul>
     </StyledMainNavigation>
   )
 }

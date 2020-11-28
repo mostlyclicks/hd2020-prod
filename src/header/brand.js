@@ -1,12 +1,15 @@
 import React from 'react'
+import { Link } from 'gatsby'
+import logo from "../images/HulseDentalLogo2016.png"
 
 const Brand = () => {
 
   return (
     <>
-      <h3>Logo goes here.</h3>
+      <Link to="/"><img src={logo} alt="Hulse Dental logo" /></Link>
     </>
   )
 }
 
 export default Brand
+

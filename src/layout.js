@@ -1,58 +1,19 @@
 import React from 'react'
-import { StaticQuery, graphql, Link } from "gatsby"
+// import { graphql, Link, useStaticQuery } from "gatsby"
 import styled from 'styled-components'
 import breakpoint from "./css/breakpoints"
 import Header from './header/header'
 import Footer from './footer'
 
+const message = "hello"
 
-const navigationQuery = graphql`
-{
-  allPrismicNavigation {
-    edges {
-      node {
-        data {
-          navigation_links {
-            label
-            link {
-              uid
-            }
-          }
-        }
-      }
-    }
-  }
-}
-`
 
 
 
 const Layout = ({children}) => {
-
-
-  // const navigationData = data.allPrismicNavigation.edges[0].node.data.navigation_links
-  // console.log(navigationData)
-
   return (
     <StyledLayout>
-    
-      <StaticQuery
-        query={navigationQuery}
-        render={(data) => {
-          console.log(data)
-          return data.allPrismicNavigation.edges[0].node.data.navigation_links.map((link) => {
-            return (
-              <NavLink key={link.link.uid}>
-                <Link to={`/${link.link.uid}`}>{link.label}</Link>
-              </NavLink>
-            )
-          })
-          
-        }}
-      />
-      
-
-
+      <h2>Site nav</h2>
       <Header />
       {children}
       <Footer />

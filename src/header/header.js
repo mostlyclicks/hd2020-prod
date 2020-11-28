@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql, useStaticQuery, Link } from 'gatsby'
 import Brand from './brand'
 import MainNavigation from './nav'
 import styled from "styled-components"
@@ -11,7 +12,6 @@ const Header = () => {
   return (
     <HeaderDiv>
       <Brand />
-      <h3>This is the header</h3>
       <MainNavigation />
     </HeaderDiv>
   )
