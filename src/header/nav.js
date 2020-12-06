@@ -123,11 +123,13 @@ const StyledMainNavigation = styled.nav`
   @media only screen and ${breakpoint.device.laptopL} {
     border:1px solid pink;
     flex:7;
+    ul {max-width:700px;}
   }
 
   @media only screen and ${breakpoint.device.desktop} {
     border:1px solid purple;
     flex:9;
+    ul {max-width:900px;}
   }
 
 

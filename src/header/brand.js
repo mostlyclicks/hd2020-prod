@@ -17,9 +17,13 @@ export default Brand
 
 
 const StyledBrand = styled.div`
-  img {width:50%;}
+  
   display:flex;
   flex:1;
+  @media only screen and ${breakpoint.device.mobileS} {
+    border:1px solid red;
+    img {width:400px;}
+  }
   @media only screen and ${breakpoint.device.mobileL} {
     border:1px solid green;
     img {width:28%;}
