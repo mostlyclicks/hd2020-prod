@@ -39,6 +39,7 @@ const HeaderDiv = styled.div`
 
   @media only screen and ${breakpoint.device.laptop} {
     border:1px solid yellow;
+    display:flex;
   }
 
   @media only screen and ${breakpoint.device.laptopL} {
@@ -49,3 +50,4 @@ const HeaderDiv = styled.div`
     border:1px solid purple;
   }
 `
+

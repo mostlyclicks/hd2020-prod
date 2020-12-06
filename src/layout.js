@@ -13,7 +13,6 @@ const message = "hello"
 const Layout = ({children}) => {
   return (
     <StyledLayout>
-      <h2>Site nav</h2>
       <Header />
       {children}
       <Footer />
