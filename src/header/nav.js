@@ -80,14 +80,17 @@ const StyledMainNavigation = styled.nav`
   display:flex;
   align-items:center;
   justify-content:flex-end;
-  ul,li {padding:0;list-style:none;}
+  ul,li {padding:0;list-style:none;font-family:'Montserrat';font-weight:700;}
   
   ul {
     display:flex;
-    width:50%;
     flex:1;
     justify-content:space-around;
-    max-width:500px;
+    max-width:100%;
+    a {
+      text-decoration:none;
+
+    }
     
   }
 
@@ -107,22 +110,24 @@ const StyledMainNavigation = styled.nav`
 
   @media only screen and ${breakpoint.device.tablet} {
     border:1px solid black;
+    
   }
 
   @media only screen and ${breakpoint.device.laptop} {
     border:1px solid yellow;
+    ul {max-width:500px;}
     
     flex:4;
   }
 
   @media only screen and ${breakpoint.device.laptopL} {
     border:1px solid pink;
-    flex:5;
+    flex:7;
   }
 
   @media only screen and ${breakpoint.device.desktop} {
     border:1px solid purple;
-    flex:11;
+    flex:9;
   }
 
 

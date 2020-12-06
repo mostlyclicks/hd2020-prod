@@ -24,7 +24,7 @@ const ProgressNotes = () => {
         <li>Prismic: Add Service slices</li>
         <li>Prismic: Add Get started slice</li>
         <li>Start Home Design</li>
-        <li>Start Nav</li>
+        <li><strike>Start Nav</strike></li>
         <li>Start Footer</li>
       </ul>
     

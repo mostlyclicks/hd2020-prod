@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import logo from "../images/Logo_1016px_Wide_all_purple.png"
 import styled from 'styled-components'
+import breakpoint from "../css/breakpoints"
 
 const Brand = () => {
 
@@ -16,7 +17,15 @@ export default Brand
 
 
 const StyledBrand = styled.div`
-  img {width:100%;}
+  img {width:50%;}
   display:flex;
   flex:1;
+  @media only screen and ${breakpoint.device.mobileL} {
+    border:1px solid green;
+    img {width:28%;}
+  }
+  @media only screen and ${breakpoint.device.laptop} {
+    border:1px solid yellow;
+    img {width:100%;}
+  }
 `

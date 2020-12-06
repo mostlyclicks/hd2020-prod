@@ -24,7 +24,18 @@ module.exports = {
           //home_page: require('./src/schemas/home_page.json')
         },
       },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `montserrat\:300,700`,
+        ]
+      }
     }
 
   ],
 }
+
+
+// amily=Montserrat:wght@300;700&display=swap');
