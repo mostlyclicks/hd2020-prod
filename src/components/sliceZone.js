@@ -1,19 +1,31 @@
 import React from 'react'
+import HomeHero from './hero'
+
 
 const SliceZone = ({body}) => {
-  
-  //console.log(body.primary.hero_title[0].text)
-  const heroTitle = body.primary.hero_title[0].text
-  const heroSubtext = body.primary.hero_content
-  const sliceZoneType = body.slice_type
 
   return (
     <>
-      <h1>Hero Title: {heroTitle}</h1>
-      <h2>Hero Subtext: {heroSubtext}</h2>
-      <small>Slice Type: {sliceZoneType}</small>
+      {body.map((bodyContent) => {
+        if(bodyContent.slice_type === 'hero') {
+          return (
+             <HomeHero
+              title={bodyContent.primary.hero_title[0].text}
+              content={bodyContent.primary.hero_content}
+              sliceZoneType={bodyContent.slice_type}
+              backgroundImage={bodyContent.primary.hero_background_image.url}
+             />
+          )
+        } else {
+          return (
+            <h1>Otherslice</h1>
+          ) 
+        }
+      })}
     </>
   )
 }
 
 export default SliceZone
+
+   

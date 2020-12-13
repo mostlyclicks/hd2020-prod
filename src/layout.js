@@ -14,7 +14,9 @@ const Layout = ({children}) => {
   return (
     <StyledLayout>
       <Header />
-      {children}
+      <main>
+        {children}
+      </main>
       <Footer />
     </StyledLayout>
   )
@@ -24,6 +26,14 @@ export default Layout
 
 
 const StyledLayout = styled.div`
+  display:flex;
+  flex-direction:column;
+  height:100vh;
+  main {flex:1;}
+  
+  
+  
+
   @media only screen and ${breakpoint.device.mobileS} {
     border:1px solid red;
   }

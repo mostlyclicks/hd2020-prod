@@ -20,6 +20,9 @@ export const query = graphql`
                 text
                 type
               }
+              hero_background_image {
+                url
+              }
             }
             slice_type
           }
@@ -30,9 +33,13 @@ export const query = graphql`
 }
 `
 
+
+
 export default function Home(props) {
 
-  const homeBody = props.data.allPrismicHomepage.edges[0].node.data.body[0]
+  const homeBody = props.data.allPrismicHomepage.edges[0].node.data.body
+
+console.log(homeBody)
 
   return (
     <>
@@ -42,8 +49,13 @@ export default function Home(props) {
     
     <Layout>
       <SliceZone body={homeBody} />
-      <ProgressNotes />
+      {/*<ProgressNotes />*/}
     </Layout>
     </>
   )
 }
+
+
+const StyledLayout = styled.div`
+  
+`

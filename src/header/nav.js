@@ -51,7 +51,8 @@ const MainNavigation = () => {
       <ul>
       {mainNav.map((link) => {
         return (
-          <li><Link to={`/${link.link.uid}`}>{link.label}</Link>
+          <li>
+            <Link to={`/${link.link.uid}`}>{link.label}</Link>
             {/* 
             {link.label == 'Our Office' && 
               <ul>
@@ -68,8 +69,6 @@ const MainNavigation = () => {
         )
       })}
       </ul>
-      
-      
     </StyledMainNavigation>
   )
 }
@@ -89,9 +88,7 @@ const StyledMainNavigation = styled.nav`
     max-width:100%;
     a {
       text-decoration:none;
-
     }
-    
   }
 
 

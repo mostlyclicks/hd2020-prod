@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import logo from "../images/Logo_1016px_Wide_all_purple.png"
+//  import logo from "../images/logo-placeholder.png"
 import styled from 'styled-components'
 import breakpoint from "../css/breakpoints"
 
