@@ -12,6 +12,7 @@ const Footer = () => {
 
 export default Footer
 
-const StyledFooter = styled.footer`
+const StyledFooter = styled.div`
+  
 
 `

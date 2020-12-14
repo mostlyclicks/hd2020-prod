@@ -11,8 +11,10 @@ const Header = () => {
 
   return (
     <HeaderDiv>
-      <Brand />
-      <MainNavigation />
+      
+        <Brand />
+        <MainNavigation />
+      
     </HeaderDiv>
   )
 }
@@ -20,34 +22,43 @@ const Header = () => {
 export default Header
 
 
+
+
 const HeaderDiv = styled.div`
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+
+
+
   @media only screen and ${breakpoint.device.mobileS} {
-    border:1px solid red;
+    // border:1px solid red;
   }
 
   @media only screen and ${breakpoint.device.mobileM} {
-    border:1px solid blue;
+    // border:1px solid blue;
   }
 
   @media only screen and ${breakpoint.device.mobileL} {
-    border:1px solid green;
+    // border:1px solid green;
   }
 
   @media only screen and ${breakpoint.device.tablet} {
-    border:1px solid black;
+    // border:1px solid black;
   }
 
   @media only screen and ${breakpoint.device.laptop} {
-    border:1px solid yellow;
+    // border:1px solid yellow;
     display:flex;
   }
 
   @media only screen and ${breakpoint.device.laptopL} {
-    border:1px solid pink;
+    // border:1px solid pink;
   }
 
   @media only screen and ${breakpoint.device.desktop} {
-    border:1px solid purple;
+    // border:1px solid purple;
   }
 `
 

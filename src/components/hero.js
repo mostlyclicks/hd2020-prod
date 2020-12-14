@@ -18,20 +18,19 @@ const HomeHero = ({title, content, backgroundImage}) => {
 
 export default HomeHero
 
-const HomeHeroWrapper = styled.div`
-  height: 90vh;
+const HomeHeroWrapper = styled.section`
+  height: 100vh;
   background-image:url('${props => props.backgroundImage}');
   background-size:cover;
   background-repeat:no-repeat;
-  z-index:-1;
+  background-position:center;
+  
   display:flex;
   align-items:center;
   text-align:right;
-  position:absolute;
-  width:100%;
-  top:0;
-  left:0;
+
   div {
+    margin-top:200px;
     border:1px solid blue;
     width:1200px;
     font-family:'Montserrat';

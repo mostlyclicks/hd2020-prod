@@ -4,11 +4,7 @@ import styled from 'styled-components'
 import breakpoint from "./css/breakpoints"
 import Header from './header/header'
 import Footer from './footer'
-
-const message = "hello"
-
-
-
+import './layout.css'
 
 const Layout = ({children}) => {
   return (
@@ -26,40 +22,38 @@ export default Layout
 
 
 const StyledLayout = styled.div`
+  width:100%;
   display:flex;
   flex-direction:column;
   height:100vh;
   main {flex:1;}
-  
-  
-  
 
   @media only screen and ${breakpoint.device.mobileS} {
-    border:1px solid red;
+    // border:1px solid red;
   }
 
   @media only screen and ${breakpoint.device.mobileM} {
-    border:1px solid blue;
+    // border:1px solid blue;
   }
 
   @media only screen and ${breakpoint.device.mobileL} {
-    border:1px solid green;
+    // border:1px solid green;
   }
 
   @media only screen and ${breakpoint.device.tablet} {
-    border:1px solid black;
+    // border:1px solid black;
   }
 
   @media only screen and ${breakpoint.device.laptop} {
-    border:1px solid yellow;
+    // border:1px solid yellow;
   }
 
   @media only screen and ${breakpoint.device.laptopL} {
-    border:1px solid pink;
+    // border:1px solid pink;
   }
 
   @media only screen and ${breakpoint.device.desktop} {
-    border:1px solid purple;
+    // border:1px solid purple;
   }
 `
 

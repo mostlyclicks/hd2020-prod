@@ -2,9 +2,14 @@ import React from "react"
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Layout from "../layout"
+import Header from '../header/header'
+import Footer from '../footer'
+
 import ProgressNotes from "../components/utility/progressNotes"
 import SliceZone from '../components/sliceZone'
 import styled from "styled-components"
+
+
 
 
 export const query = graphql`
@@ -14,6 +19,7 @@ export const query = graphql`
       node {
         data {
           body {
+            slice_type
             primary {
               hero_content
               hero_title {
@@ -23,8 +29,15 @@ export const query = graphql`
               hero_background_image {
                 url
               }
+              intro_image {
+                url
+              }
+              text_block {
+                text
+                type
+              }
             }
-            slice_type
+            
           }
         }
       }
@@ -32,8 +45,6 @@ export const query = graphql`
   }
 }
 `
-
-
 
 export default function Home(props) {
 
@@ -46,16 +57,12 @@ console.log(homeBody)
     <Helmet>
       <title>Hulse Dental - Onalaska WI</title>
     </Helmet>
-    
-    <Layout>
-      <SliceZone body={homeBody} />
-      {/*<ProgressNotes />*/}
-    </Layout>
+      <Layout>
+        <Header />
+          <SliceZone body={homeBody} />
+          <ProgressNotes />
+      </Layout>
     </>
   )
 }
 
-
-const StyledLayout = styled.div`
-  
-`
