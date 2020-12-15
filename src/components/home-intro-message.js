@@ -36,8 +36,6 @@ const StyledIntroMessage = styled.div`
 
 const IntroMessageWrapper = styled.div`
   display:flex;
-
-  
   width:65%;
   height:70vh;
   background-color:rgba(0,0,0,.4);
@@ -49,8 +47,8 @@ const IntroMessageWrapper = styled.div`
 const IntroMessageText = styled.div`
   display:flex;
   flex-direction:column;
-  flex-grow:1;
-  width:67%;
+  flex:3;
+  
   padding:2em;
   align-self:center;
   font-family:'Montserrat';
@@ -67,6 +65,6 @@ const IntroMessageText = styled.div`
 const IntroImage = styled.div`
   background-image:url('${props => props.backgroundImage}');
   background-size:cover;
-  width:33%;
+  flex:1;
 
 `

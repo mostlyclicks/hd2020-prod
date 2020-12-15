@@ -3,6 +3,7 @@ const baseColors = {
   lightPurple: '#dcdaf2',
   highlightPurple: '#ad64de',
   mediumGray: '#8f8da2',
+  darkGray: '#565560',
   purpleGray: '#7671a8'
 }
 
