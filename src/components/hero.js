@@ -20,6 +20,7 @@ export default HomeHero
 
 const HomeHeroWrapper = styled.section`
   height: 100vh;
+  min-height:600px;
   background-image:url('${props => props.backgroundImage}');
   background-size:cover;
   background-repeat:no-repeat;
@@ -31,7 +32,7 @@ const HomeHeroWrapper = styled.section`
 
   div {
     margin-top:200px;
-    border:1px solid blue;
+    // border:1px solid blue;
     width:1200px;
     font-family:'Montserrat';
     max-width:1200px;
@@ -75,9 +76,5 @@ const HomeHeroWrapper = styled.section`
     h1 {font-size:180%;}
     h2 {padding:0;}
   }
-
- 
-  
-  
 `
 

@@ -11,10 +11,8 @@ const Header = () => {
 
   return (
     <HeaderDiv>
-      
-        <Brand />
-        <MainNavigation />
-      
+      <Brand />
+      <MainNavigation />
     </HeaderDiv>
   )
 }

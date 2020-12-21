@@ -5,7 +5,7 @@ const Copyright = ({companyName, copyRightColor}) => {
 
   return (
     <StyledCopyright copyRightColor={copyRightColor}>
-      <small>Copyright © {(new Date().getFullYear())} {companyName} - All rights reserved.</small>
+      <small>Copyright © {(new Date().getFullYear())} {companyName}<br/>All rights reserved.</small>
     </StyledCopyright>
   )
 

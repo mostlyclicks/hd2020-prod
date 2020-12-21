@@ -20,12 +20,20 @@ const ProgressNotes = () => {
 
       <h3>Todo: Prismic SliceZone Homepage 11/23 - 11/30</h3>
       <ul>
-        <li>Prismic: Add Intro text</li>
+        <li><strike>Prismic: Add Intro text</strike></li>
+        <li><strike>Start Home Design</strike></li>
+        <li><strike>Start Nav</strike></li>
+        <li><strike>Start Footer</strike></li>
+      </ul>
+      <h3>Todo: Prismic SliceZone Level2 12/14 - 11/21</h3>
+      <ul>
+        <li>Start Level 2 body content slices</li>
+        <li>Start Level 2 body content styling</li>
+        <li>Footer Responsive</li>
+        <li>Header/Nav Responsive</li>
         <li>Prismic: Add Service slices</li>
         <li>Prismic: Add Get started slice</li>
-        <li>Start Home Design</li>
-        <li><strike>Start Nav</strike></li>
-        <li>Start Footer</li>
+        <li>Start Home Design Revision</li>
       </ul>
     
     </StyledProgressNotes>

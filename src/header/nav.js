@@ -94,37 +94,37 @@ const StyledMainNavigation = styled.nav`
 
 
   @media only screen and ${breakpoint.device.mobileS} {
-    border:1px solid red;
+    //border:1px solid red;
   }
 
   @media only screen and ${breakpoint.device.mobileM} {
-    border:1px solid blue;
+    //border:1px solid blue;
   }
 
   @media only screen and ${breakpoint.device.mobileL} {
-    border:1px solid green;
+    //border:1px solid green;
   }
 
   @media only screen and ${breakpoint.device.tablet} {
-    border:1px solid black;
+    //border:1px solid black;
     
   }
 
   @media only screen and ${breakpoint.device.laptop} {
-    border:1px solid yellow;
+    //border:1px solid yellow;
     ul {max-width:500px;}
     
     flex:4;
   }
 
   @media only screen and ${breakpoint.device.laptopL} {
-    border:1px solid pink;
+    //border:1px solid pink;
     flex:7;
     ul {max-width:700px;}
   }
 
   @media only screen and ${breakpoint.device.desktop} {
-    border:1px solid purple;
+    //border:1px solid purple;
     flex:9;
     ul {max-width:900px;}
   }
